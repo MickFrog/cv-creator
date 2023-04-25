@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import './App.css';
+import PageHeader from './components/PageHeader'
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -10,7 +12,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        
+        <PageHeader />
       </div>
     );
   }

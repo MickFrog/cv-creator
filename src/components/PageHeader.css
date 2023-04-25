@@ -1,0 +1,10 @@
+.myHeader {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #2D2A32;
+    color: #8D99AE;
+
+    font-size: 2rem;
+    padding: 1rem 0;
+    padding-left: 20%
+}
