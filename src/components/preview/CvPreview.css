@@ -1,0 +1,10 @@
+.cv-preview {
+    display: flex;
+    flex-flow: column no-wrap;
+    
+    height: 100vh;
+    margin: 2rem;
+
+    position: sticky;
+    top: 2rem;
+}

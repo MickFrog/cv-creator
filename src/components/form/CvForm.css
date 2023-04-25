@@ -1,0 +1,6 @@
+.cv-form {
+    display: flex;
+    flex-flow: column no-wrap;
+
+    min-height: 100vh;
+}

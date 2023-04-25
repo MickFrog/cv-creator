@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
-import PageHeader from './components/PageHeader'
+import PageHeader from './components/PageHeader';
+import CvContainer from "./components/CvContainer";
 
 class App extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -13,6 +14,7 @@ class App extends Component {
     return(
       <div>
         <PageHeader />
+        <CvContainer />
       </div>
     );
   }
