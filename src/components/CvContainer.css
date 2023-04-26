@@ -1,6 +1,6 @@
 .myContainer {
     display: grid;
-    grid-template-columns: max(40%, 400px) max(60%, 500px);
+    grid-template-columns: max(30%, 400px) max(70%, 500px);
 
     background-color: #141414;
 }

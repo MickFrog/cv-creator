@@ -21,6 +21,7 @@ class UserInfoForm extends Component {
                     <FormInput inputName="Email" />
                     <FormInput inputName="City/Town" />
                     <FormInput inputName="Country" />
+                    <textarea maxLength={500} placeholder="Tell us about yourself in 500 chars"/>
                 </form>
             </div>
         );
