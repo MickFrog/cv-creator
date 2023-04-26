@@ -3,6 +3,7 @@ import './ExperienceForm.css';
 import FormHeading from "./FormHeading";
 import logo from './work.svg'
 import ExpSnippet from "./ExpSnippet";
+import uniqid from 'uniqid';
 
 
 class ExperienceForm extends Component {
@@ -10,17 +11,49 @@ class ExperienceForm extends Component {
     constructor(props) {
         super(props);
         
+        this.state = {
+            expArr: [uniqid()], // initial single experience
+        }
+
+        this.addExp = this.addExp.bind(this);
+        this.deleteExp = this.deleteExp.bind(this);
     }
+
+    addExp() {
+        this.setState({
+            expArr: this.state.expArr.concat(uniqid())
+        })
+    }
+
+    deleteExp(expKey) {
+        this.setState({
+            expArr: this.state.expArr.filter(elem => elem !== expKey)
+        })
+
+        // console.log(this.state.expArr.filter(elem => elem !== expKey));
+    } 
 
     render() {
         return(
             <div className="form-div">
                 <FormHeading logo={logo} text="Experience" />
-                <ExpSnippet />
 
-                <div className="btn-holder">
-                    <button className="addBtn">Add</button>
-                </div>
+                <form className="user-form">
+                    {this.state.expArr.map((val, index) => {
+                        if (this.state.expArr.length === 1) {
+                            return <ExpSnippet key={val} id={val} delCallback={this.deleteExp}/>
+                        } 
+
+                        if (this.state.expArr.length > 1) {
+                            return <ExpSnippet key={val} id={val} expNum={`#${index+1}`} delCallback={this.deleteExp}/>
+                        }
+                        return null;
+                    })}
+
+                    <div className="btn-holder">
+                        <button type="button" className="addBtn" onClick={this.addExp}>Add</button>
+                    </div>
+                </form>
             </div>
         );
     }

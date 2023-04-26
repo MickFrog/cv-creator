@@ -8,21 +8,27 @@ class ExpSnippet extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
+
+        this.deleteExp = this.deleteExp.bind(this);
+    }
+
+    deleteExp() {
+        this.props.delCallback(this.props.id);
     }
 
     render() {
         return(
-            <form className="user-form">
+            <div className="snippet-div">
                 <div className="exp-header">
-                    <h2>Experience #1</h2>
-                    <button className="delBtn"><img src={deletePic} alt="del_btn"/></button>
+                    <h2>Experience {this.props.expNum}</h2>
+                    <button type="button" className="delBtn"><img src={deletePic} onClick={this.deleteExp} alt="del_btn"/></button>
                 </div>
                 <FormInput inputName="Company" />
                 <FormInput inputName="Role" />
                 <FormTextArea characters={600} placeText="Briefly describe the work done at the company" />
                 <FormInput inputName="Start Date of Work" />
                 <FormInput inputName="End Date of Work" />
-            </form>
+            </div>
         );  
     }
 }
