@@ -3,8 +3,8 @@ textarea {
 
     min-height: 5rem;
 
-    background-color: #292929;
-    color: #FDFFFC;
+    background-color: var(--inputBg);
+    color: var(--myWhite);
 
     font-size: 1rem;
     font-family: inherit;
@@ -14,5 +14,5 @@ textarea {
     padding: 5px;
 
     margin: 5px 0px;
-    outline: #FDFFFC;
+    outline: var(--myWhite);
 }

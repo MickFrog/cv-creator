@@ -2,9 +2,9 @@
     border: 0;
     padding: 10px 1rem;
     border-radius: 0.5rem;
-    background-color: #292929;
+    background-color: var(--inputBg);
 
-    color: #A4F9C8;
+    color: var(--myGreen);
     font-size: 1.2rem;
     width: 100px;
     display: block;
@@ -13,8 +13,8 @@
 }
 
 .addBtn:hover {
-    background-color: #A4F9C8;
-    color: #292929;
+    background-color: var(--myGreen);
+    color: var(--inputBg);
 }
 
 .btn-holder {

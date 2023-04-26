@@ -2,8 +2,8 @@ input {
     width: 90%;
     height: 2.2rem;
 
-    background-color: #292929;
-    color: #FDFFFC;
+    background-color: var(--inputBg);
+    color: var(--myWhite);
 
     font-size: 1rem;
     font-family: inherit;
@@ -13,5 +13,5 @@ input {
     padding: 5px;
 
     margin: 5px 0px;
-    outline: #FDFFFC;
+    outline: var(--myWhite);
 }

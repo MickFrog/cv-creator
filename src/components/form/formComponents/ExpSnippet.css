@@ -5,14 +5,14 @@
     justify-content: space-between;
     align-items: center;
 
-    color: #F4FFFD;
+    color: var(--myWhite);
 }
 
 .delBtn {
     border: 0;
     padding: 5px;
     border-radius: 0.5rem;
-    background-color: #292929;
+    background-color: var(--inputBg);
 }
 
 .delBtn:hover {
