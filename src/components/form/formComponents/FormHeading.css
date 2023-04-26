@@ -1,0 +1,14 @@
+.formHeading{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #9AC4F8;
+
+    margin-left: 10px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}

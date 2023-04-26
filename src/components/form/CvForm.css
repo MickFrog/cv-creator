@@ -1,6 +1,10 @@
 .cv-form {
+    padding: 1rem;
     display: flex;
-    flex-flow: column no-wrap;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    gap: 15px;
 
     min-height: 100vh;
 }

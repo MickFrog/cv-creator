@@ -1,0 +1,17 @@
+input {
+    width: 90%;
+    height: 2.2rem;
+
+    background-color: #292929;
+    color: #FDFFFC;
+
+    font-size: 1.2rem;
+    font-family: inherit;
+
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 5px;
+
+    margin: 5px 0px;
+    outline: #FDFFFC;
+}

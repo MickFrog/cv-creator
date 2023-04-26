@@ -1,8 +1,8 @@
 .myHeader {
     display: flex;
     flex-flow: column wrap;
-    background-color: #2D2A32;
-    color: #8D99AE;
+    background-color: #1c1c1c;
+    color: #9AC4F8;
 
     font-size: 2rem;
     padding: 1rem 0;
