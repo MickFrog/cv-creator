@@ -1,6 +1,6 @@
 .cv-preview {
     display: flex;
-    flex-flow: column no-wrap;
+    flex-flow: column nowrap;
     
     height: 100vh;
     margin: 2rem;

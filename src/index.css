@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+:root {
+  --darkBlack: #141414;
+  --formBg: #1c1c1c;
+  --inputBg: #292929;
+  --lightBlue: #9AC4F8;
+  --myWhite: #F4FFFD;
+}
+
 * {
   margin: 0px;
   box-sizing: border-box;

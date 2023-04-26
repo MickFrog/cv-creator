@@ -1,0 +1,20 @@
+.exp-header {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #F4FFFD;
+}
+
+.delBtn {
+    border: 0;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: #292929;
+}
+
+.delBtn:hover {
+    background-color: #84596B;
+}

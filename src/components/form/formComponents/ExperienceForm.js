@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import './ExperienceForm.css';
 import FormHeading from "./FormHeading";
 import logo from './work.svg'
-import FormInput from "./FormInput";
-import FormTextArea from "./FormTextArea";
+import ExpSnippet from "./ExpSnippet";
+
 
 class ExperienceForm extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -15,13 +16,11 @@ class ExperienceForm extends Component {
         return(
             <div className="form-div">
                 <FormHeading logo={logo} text="Experience" />
-                <form className="user-form">
-                    <FormInput inputName="Company" />
-                    <FormInput inputName="Role" />
-                    <FormTextArea characters={600} placeText="Briefly describe the work done at the company" />
-                    <FormInput inputName="Start Date of Work" />
-                    <FormInput inputName="End Date of Work" />
-                </form>
+                <ExpSnippet />
+
+                <div className="btn-holder">
+                    <button className="addBtn">Add</button>
+                </div>
             </div>
         );
     }

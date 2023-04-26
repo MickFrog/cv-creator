@@ -1,0 +1,24 @@
+.addBtn {
+    border: 0;
+    padding: 10px 1rem;
+    border-radius: 0.5rem;
+    background-color: #292929;
+
+    color: #A4F9C8;
+    font-size: 1.2rem;
+    width: 100px;
+    display: block;
+
+    margin-top: -10px;
+}
+
+.addBtn:hover {
+    background-color: #A4F9C8;
+    color: #292929;
+}
+
+.btn-holder {
+    display: flex;
+    justify-content: center;
+
+}
