@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import './UserInfoForm.css';
 import FormHeading from "./FormHeading";
 import FormInput from "./FormInput";
+import FormTextArea from "./FormTextArea";
 import logo from './person.svg'
 
 class UserInfoForm extends Component {
@@ -12,16 +12,16 @@ class UserInfoForm extends Component {
 
     render() {
         return(
-            <div className="user-info-div">
+            <div className="form-div">
                 <FormHeading logo={logo} text="Personal Information"/>
-                <form className="user-info-form">
+                <form className="user-form">
                     <FormInput inputName="Name" />
                     <FormInput inputName="Role" />
                     <FormInput inputName="Phone" />
                     <FormInput inputName="Email" />
                     <FormInput inputName="City/Town" />
                     <FormInput inputName="Country" />
-                    <textarea maxLength={500} placeholder="Tell us about yourself in 500 chars"/>
+                    <FormTextArea characters={500} placeText="Tell us about yourself in 500 chars" />
                 </form>
             </div>
         );
