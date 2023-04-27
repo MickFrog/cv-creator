@@ -24,6 +24,8 @@ class SkillForm extends Component {
     }
 
     delSkill(skillKey) {
+        if (this.state.skillArr.length < 2) return; //have at least one skill
+
         this.setState({
             skillArr: this.state.skillArr.filter(elem => elem !== skillKey)
         })
@@ -37,11 +39,11 @@ class SkillForm extends Component {
                 <form className="user-form">
                 {this.state.skillArr.map((val) => {
                         if (this.state.skillArr.length === 1) {
-                            return <SkillSnippet key={val} id={val} delCallback={this.delSkill}/>
+                            return <SkillSnippet key={val} id={val} delCallback={this.delSkill} deleteOn={false}/>
                         } 
 
                         if (this.state.skillArr.length > 1) {
-                            return <SkillSnippet key={val} id={val} delCallback={this.delSkill}/>
+                            return <SkillSnippet key={val} id={val} delCallback={this.delSkill} deleteOn={true}/>
                         }
                         return null;
                     })}

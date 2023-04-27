@@ -26,6 +26,8 @@ class ExperienceForm extends Component {
     }
 
     deleteExp(expKey) {
+        if (this.state.expArr.length < 2) return;
+        
         this.setState({
             expArr: this.state.expArr.filter(elem => elem !== expKey)
         })
@@ -41,11 +43,11 @@ class ExperienceForm extends Component {
                 <form className="user-form">
                     {this.state.expArr.map((val, index) => {
                         if (this.state.expArr.length === 1) {
-                            return <ExpSnippet key={val} id={val} delCallback={this.deleteExp}/>
+                            return <ExpSnippet key={val} id={val} delCallback={this.deleteExp} deleteOn={false}/>
                         } 
 
                         if (this.state.expArr.length > 1) {
-                            return <ExpSnippet key={val} id={val} expNum={`#${index+1}`} delCallback={this.deleteExp}/>
+                            return <ExpSnippet key={val} id={val} expNum={`#${index+1}`} delCallback={this.deleteExp} deleteOn={true}/>
                         }
                         return null;
                     })}

@@ -21,7 +21,12 @@ class ExpSnippet extends Component {
             <div className="snippet-div">
                 <div className="exp-header">
                     <h2>Experience {this.props.expNum}</h2>
-                    <button type="button" className="delBtn"><img src={deletePic} onClick={this.deleteExp} alt="del_btn"/></button>
+                    { //don't show delete button with one experience
+                        this.props.deleteOn 
+                        ? <button type="button" className="delBtn"><img src={deletePic} onClick={this.deleteExp} alt="del_btn"/></button>
+                        : null
+                    }
+                    
                 </div>
                 <FormInput inputName="Company" />
                 <FormInput inputName="Role" />

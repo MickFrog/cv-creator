@@ -19,7 +19,12 @@ class SkillSnippet extends Component {
         return(
             <div className='skill-snip'>
                 <FormInput inputName="Skill" />
-                <button type="button" className="delBtn"><img src={deletePic} alt="del_btn" onClick={this.deleteSkill}/></button>
+                {//don't show delete button with one skill
+                    this.props.deleteOn
+                    ? <button type="button" className="delBtn"><img src={deletePic} alt="del_btn" onClick={this.deleteSkill}/></button>
+                    : null
+                }
+                
             </div>
         );
     }
