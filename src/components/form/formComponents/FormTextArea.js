@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './FormTextArea.css'
+import './FormInput.css';
 
 class FormTextArea extends Component {
     // eslint-disable-next-line no-useless-constructor

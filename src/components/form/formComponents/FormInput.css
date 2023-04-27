@@ -1,5 +1,5 @@
-input {
-    width: 90%;
+input,textarea {
+    width: 95%;
     height: 2.2rem;
 
     background-color: var(--inputBg);
@@ -14,4 +14,9 @@ input {
 
     margin: 5px 0px;
     outline: var(--myWhite);
+}
+
+textarea {
+    min-height: 5rem;
+    min-width: 95%;
 }
