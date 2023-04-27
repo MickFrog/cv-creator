@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FormHeading from "./FormHeading";
-import logo from './skill.svg'
+import logo from './images/skill.svg'
 import SkillSnippet from "./SkillSnippet";
 import uniqid from 'uniqid'
 
@@ -34,7 +34,7 @@ class SkillForm extends Component {
     render() {
         return(
             <div className="form-div">
-                <FormHeading logo={logo} text="Skills" />
+                <FormHeading logo={logo} text="Skills & Technologies" />
 
                 <form className="user-form">
                 {this.state.skillArr.map((val) => {

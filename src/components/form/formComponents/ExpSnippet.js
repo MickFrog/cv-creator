@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './ExpSnippet.css';
-import deletePic from './delete.svg'
+import deletePic from './images/delete.svg'
 import FormInput from "./FormInput";
 import FormTextArea from "./FormTextArea";
 

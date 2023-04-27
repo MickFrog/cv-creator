@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FormHeading from "./FormHeading";
 import FormInput from "./FormInput";
 import FormTextArea from "./FormTextArea";
-import logo from './person.svg'
+import logo from './images/person.svg'
 
 class UserInfoForm extends Component {
     // eslint-disable-next-line no-useless-constructor

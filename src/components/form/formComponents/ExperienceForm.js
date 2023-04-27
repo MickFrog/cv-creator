@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import './ExperienceForm.css';
 import FormHeading from "./FormHeading";
-import logo from './work.svg'
+import logo from './images/work.svg'
 import ExpSnippet from "./ExpSnippet";
 import uniqid from 'uniqid';
 
@@ -27,7 +26,7 @@ class ExperienceForm extends Component {
 
     deleteExp(expKey) {
         if (this.state.expArr.length < 2) return;
-        
+
         this.setState({
             expArr: this.state.expArr.filter(elem => elem !== expKey)
         })

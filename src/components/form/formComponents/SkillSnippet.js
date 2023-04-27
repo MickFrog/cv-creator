@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SkillSnippet.css';
-import deletePic from './delete.svg';
+import deletePic from './images/delete.svg';
 import FormInput from './FormInput';
 
 class SkillSnippet extends Component {
