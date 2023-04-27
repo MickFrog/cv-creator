@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+import './SkillSnippet.css';
+import deletePic from './delete.svg';
+import FormInput from './FormInput';
+
+class SkillSnippet extends Component {
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props) {
+        super(props);
+        
+        this.deleteSkill = this.deleteSkill.bind(this);
+    }
+
+    deleteSkill() {
+        this.props.delCallback(this.props.id);
+    }
+
+    render() {
+        return(
+            <div className='skill-snip'>
+                <FormInput inputName="Skill" />
+                <button type="button" className="delBtn"><img src={deletePic} alt="del_btn" onClick={this.deleteSkill}/></button>
+            </div>
+        );
+    }
+}
+
+export default SkillSnippet;
