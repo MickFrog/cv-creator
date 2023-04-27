@@ -1,12 +1,34 @@
 import React, { Component } from "react";
 import FormHeading from "./FormHeading";
 import logo from './images/school.svg';
+import EducationSnippet from "./EducationSnippet";
+import uniqid from 'uniqid';
 
-class ExperienceForm extends Component {
+class EducationForm extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
         
+        this.state = {
+            bgArr: [uniqid()]
+        }
+
+        this.addBg = this.addBg.bind(this);
+        this.deleteBg = this.deleteBg.bind(this);
+    }
+
+    addBg() {
+        this.setState({
+            bgArr: this.state.bgArr.concat(uniqid())
+        })
+    }
+
+    deleteBg(bgKey) {
+        if(this.state.bgArr.length < 2) return;
+
+        this.setState({
+            bgArr: this.state.bgArr.filter(elem => elem !== bgKey)
+        })
     }
 
     render() {
@@ -15,10 +37,22 @@ class ExperienceForm extends Component {
                 <FormHeading logo={logo} text="Educational Background" />
 
                 <form className="user-form">
+                    {this.state.bgArr.map((val, index) => {
+                        if(this.state.bgArr.length === 1) {
+                            return <EducationSnippet key={val} id={val} deleteOn={false}/>
+                        }
 
+                        if (this.state.bgArr.length > 1) {
+                            return <EducationSnippet bgNum={`#${index+1}`} key={val} id={val} delCallback={this.deleteBg} deleteOn={true}/>
+                        }
+
+                        return null
+                    })
+
+                    }
 
                     <div className="btn-holder">
-                        <button type="button" className="addBtn" onClick={this.addExp}>Add</button>
+                        <button type="button" className="addBtn" onClick={this.addBg}>Add</button>
                     </div>
                 </form>
             </div>
@@ -26,4 +60,4 @@ class ExperienceForm extends Component {
     }
 }
 
-export default ExperienceForm;
+export default EducationForm;

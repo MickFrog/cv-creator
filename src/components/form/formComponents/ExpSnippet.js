@@ -19,7 +19,7 @@ class ExpSnippet extends Component {
     render() {
         return(
             <div className="snippet-div">
-                <div className="exp-header">
+                <div className="snip-header">
                     <h2>Experience {this.props.expNum}</h2>
                     { //don't show delete button with one experience
                         this.props.deleteOn 
@@ -31,8 +31,7 @@ class ExpSnippet extends Component {
                 <FormInput inputName="Company" />
                 <FormInput inputName="Role" />
                 <FormTextArea characters={600} placeText="Briefly describe the work done at the company" />
-                <FormInput inputName="Start Date of Work" />
-                <FormInput inputName="End Date of Work" />
+                <FormInput inputName="Time frame" />
             </div>
         );  
     }
