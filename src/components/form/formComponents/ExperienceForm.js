@@ -51,9 +51,14 @@ class ExperienceForm extends Component {
                         return null;
                     })}
 
-                    <div className="btn-holder">
-                        <button type="button" className="addBtn" onClick={this.addExp}>Add</button>
-                    </div>
+                    {
+                        this.state.expArr.length <= 2 //limit to 3 exps; uses 2 coz of async delayed updating of expArr
+                        ?   <div className="btn-holder">
+                                <button type="button" className="addBtn" onClick={this.addExp}>Add</button>
+                            </div>
+                        : null
+                    }
+                    
                 </form>
             </div>
         );

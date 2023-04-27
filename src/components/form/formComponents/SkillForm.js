@@ -48,9 +48,13 @@ class SkillForm extends Component {
                         return null;
                     })}
                 
-                    <div className="btn-holder">
-                        <button type="button" className="addBtn" onClick={this.addSkill}>Add</button>
-                    </div>
+                    {
+                        this.state.skillArr.length <= 7 //limit to 8 skills; uses 7 coz of async delayed updating of skillArr
+                        ?   <div className="btn-holder">
+                                <button type="button" className="addBtn" onClick={this.addSkill}>Add</button>
+                            </div>
+                        : null
+                    }
                 </form>
 
             </div>

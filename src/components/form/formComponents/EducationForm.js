@@ -51,9 +51,13 @@ class EducationForm extends Component {
 
                     }
 
-                    <div className="btn-holder">
-                        <button type="button" className="addBtn" onClick={this.addBg}>Add</button>
-                    </div>
+                    {
+                        this.state.bgArr.length <= 2 //limit to 3 bgs; uses 2 coz of async delayed updating of bgArr
+                        ?   <div className="btn-holder">
+                                <button type="button" className="addBtn" onClick={this.addBg}>Add</button>
+                            </div>
+                        : null
+                    }
                 </form>
             </div>
         );

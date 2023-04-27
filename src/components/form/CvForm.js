@@ -16,8 +16,8 @@ class CvForm extends Component {
             <div className="cv-form">
                 <UserInfoForm />
                 <ExperienceForm />
-                <SkillForm />
                 <EducationForm />
+                <SkillForm />
             </div>
         );
     }
