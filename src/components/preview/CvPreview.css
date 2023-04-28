@@ -1,9 +1,15 @@
 .cv-preview {
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template: 1fr 1fr 3fr / 3fr 2fr;
+    justify-self: center;
     
-    height: 100vh;
+    height: 95vh;
+    width: 650px;
+
     margin: 2rem;
+
+    background-color: var(--myWhite);
+    border-radius: 5px;
 
     position: sticky;
     top: 2rem;

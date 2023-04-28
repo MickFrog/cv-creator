@@ -1,7 +1,7 @@
 .myContainer {
     padding-left: 5%;
     display: grid;
-    grid-template-columns: max(30%, 400px) max(60%, 500px);
+    grid-template-columns: max(35%, 400px) 1fr;
 
     background-color: var(--darkBlack);
 }
