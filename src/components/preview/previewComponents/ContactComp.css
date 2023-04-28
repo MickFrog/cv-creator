@@ -1,0 +1,19 @@
+.contact-comp {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+
+    color: var(--myWhite);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-comp > img {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-text {
+    font-size: 0.9rem;
+}

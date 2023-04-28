@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import './UserInfoPrev.css';
+import ContactComp from "./ContactComp";
+import callLogo from './images/call.svg'
+import emailLogo from './images/email.svg'
+import locationLogo from './images/location.svg'
 
 class UserInfoPrev extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -11,7 +15,11 @@ class UserInfoPrev extends Component {
     render() {
         return(
             <div className="infoPrev">
-
+                <div className="user-name">Kalooli Lwanga</div>
+                <div className="user-role">Senior Software Developer</div>
+                <ContactComp logo={callLogo} contactText="+256 759394054" />
+                <ContactComp logo={emailLogo} contactText="kalooli123@gmail.com" />
+                <ContactComp logo={locationLogo} contactText="New York, USA" />
             </div>
         );
     }
