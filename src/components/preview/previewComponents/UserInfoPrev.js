@@ -15,11 +15,11 @@ class UserInfoPrev extends Component {
     render() {
         return(
             <div className="infoPrev">
-                <div className="user-name">Kalooli Lwanga</div>
-                <div className="user-role">Senior Software Developer</div>
-                <ContactComp logo={callLogo} contactText="+256 759394054" />
-                <ContactComp logo={emailLogo} contactText="kalooli123@gmail.com" />
-                <ContactComp logo={locationLogo} contactText="New York, USA" />
+                <div className="user-name">{this.props.userName}</div>
+                <div className="user-role">{this.props.userName}</div>
+                <ContactComp logo={callLogo} contactText={this.props.userPhone} />
+                <ContactComp logo={emailLogo} contactText={this.props.userEmail} />
+                <ContactComp logo={locationLogo} contactText={`${this.props.userCity}, ${this.props.userCountry}`} />
             </div>
         );
     }

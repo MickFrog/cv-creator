@@ -15,12 +15,12 @@ class UserInfoForm extends Component {
             <div className="form-div">
                 <FormHeading logo={logo} text="Personal Information"/>
                 <form className="user-form">
-                    <FormInput inputName="Name" />
-                    <FormInput inputName="Role" />
-                    <FormInput inputName="Phone" />
-                    <FormInput inputName="Email" />
-                    <FormInput inputName="City/Town" />
-                    <FormInput inputName="Country" />
+                    <FormInput inputName="Name" infoHandler={this.props.infoHandler} dataName="userName"/>
+                    <FormInput inputName="Role" infoHandler={this.props.infoHandler} dataName="userRole"/>
+                    <FormInput inputName="Phone" infoHandler={this.props.infoHandler} dataName="userPhone"/>
+                    <FormInput inputName="Email" infoHandler={this.props.infoHandler} dataName="userEmail"/>
+                    <FormInput inputName="City/Town" infoHandler={this.props.infoHandler} dataName="userCity"/>
+                    <FormInput inputName="Country" infoHandler={this.props.infoHandler} dataName="userCountry"/>
                     <FormTextArea characters={500} placeText="Tell us about yourself in 500 chars" />
                 </form>
             </div>

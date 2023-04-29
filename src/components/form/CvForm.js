@@ -14,7 +14,7 @@ class CvForm extends Component {
     render() {
         return (
             <div className="cv-form">
-                <UserInfoForm />
+                <UserInfoForm infoHandler={this.props.infoHandler}/>
                 <ExperienceForm />
                 <EducationForm />
                 <SkillForm />
