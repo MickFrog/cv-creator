@@ -23,12 +23,12 @@ class EducationForm extends Component {
                 <form className="user-form">
                     {this.props.educArray.map((educObj, index) => {
                             if(this.props.educArray.length === 1) {
-                                return <EducationSnippet key={educObj.id} id={educObj.id} deleteOn={false}/>
+                                return <EducationSnippet key={educObj.id} id={educObj.id} deleteOn={false} educationChange={this.props.educationChange} />
                             }
 
                             if (this.props.educArray.length > 1) {
                                 return <EducationSnippet bgNum={`#${index+1}`} key={educObj.id} id={educObj.id} 
-                                deleteEducation={this.props.deleteEducation} deleteOn={true}/>
+                                deleteEducation={this.props.deleteEducation} educationChange={this.props.educationChange} deleteOn={true}/>
                             }
 
                             return null

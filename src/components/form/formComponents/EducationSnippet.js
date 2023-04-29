@@ -15,21 +15,22 @@ class EducationSnippet extends Component {
     }
 
     render() {
+        let { bgNum, deleteOn, educationChange, id} = this.props;
         return(
             <div className="snippet-div">
                 <div className="snip-header">
-                    <h2>Background {this.props.bgNum}</h2>
+                    <h2>Background {bgNum}</h2>
                     {
-                        this.props.deleteOn
+                        deleteOn
                         ? <button type="button" className="delBtn"><img src={deletePic} onClick={this.delBg} alt="del_btn"/></button>
                         : null
                     }
                     
                 </div>
 
-                <FormInput inputName="School attended"/>
-                <FormInput inputName="Certificate/Degree obtained"/>
-                <FormInput inputName="Time frame"/>
+                <FormInput inputName="School attended" id={id} dataName="schoolName" educationChange={educationChange}/>
+                <FormInput inputName="Certificate/Degree obtained" id={id} dataName="degreeObtained" educationChange={educationChange}/>
+                <FormInput inputName="Time frame" id={id} dataName="timeFrame" educationChange={educationChange}/>
             </div>
         );
     }

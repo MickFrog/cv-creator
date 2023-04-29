@@ -31,6 +31,7 @@ class CvContainer extends Component {
         this.handleInfoInput = this.handleInfoInput.bind(this);
         this.addEducation = this.addEducation.bind(this);
         this.deleteEducation = this.deleteEducation.bind(this);
+        this.educationChange = this.educationChange.bind(this);
     }
 
     handleInfoInput(targetState, targetVal) {
@@ -61,13 +62,25 @@ class CvContainer extends Component {
         })
     }
 
+    educationChange(targetName, targetID, newValue) {
+        this.setState({
+            educationArray: this.state.educationArray
+            .map((educationElem) => {
+                if (educationElem.id === targetID) { //if target education obj, make change
+                    return {...educationElem, [targetName]: newValue}
+                }
+                return educationElem; //return other elements
+            })
+        })
+    }
+
     render() {
         return(
             <div className="myContainer">
                 <CvForm infoHandler={this.handleInfoInput}
                     // education handling
                     educArray={this.state.educationArray} addEducation={this.addEducation}
-                    deleteEducation={this.deleteEducation} 
+                    deleteEducation={this.deleteEducation} educationChange={this.educationChange}
                 />
 
                 <CvPreview {...this.state}/>
