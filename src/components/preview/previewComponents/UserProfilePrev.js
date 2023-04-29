@@ -11,7 +11,8 @@ class UserProfilePrev extends Component {
     render() {
         return(
             <div className="profilePrev">
-
+                <div className="previewHeading">Profile</div>
+                <div className="prevInfo"></div>
             </div>
         );
     }
