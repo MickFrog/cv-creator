@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './FormInput.css'
-import uniqid from 'uniqid';
 
 class FormInput extends Component {
     // eslint-disable-next-line no-useless-constructor

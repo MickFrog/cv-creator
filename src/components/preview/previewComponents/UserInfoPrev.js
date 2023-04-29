@@ -16,7 +16,7 @@ class UserInfoPrev extends Component {
         return(
             <div className="infoPrev">
                 <div className="user-name">{this.props.userName}</div>
-                <div className="user-role">{this.props.userName}</div>
+                <div className="user-role">{this.props.userRole}</div>
                 <ContactComp logo={callLogo} contactText={this.props.userPhone} />
                 <ContactComp logo={emailLogo} contactText={this.props.userEmail} />
                 <ContactComp logo={locationLogo} contactText={`${this.props.userCity}, ${this.props.userCountry}`} />
