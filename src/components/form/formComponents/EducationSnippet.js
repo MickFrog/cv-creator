@@ -11,7 +11,7 @@ class EducationSnippet extends Component {
     }
 
     delBg() {
-        this.props.delCallback(this.props.id);
+        this.props.deleteEducation(this.props.id);
     }
 
     render() {

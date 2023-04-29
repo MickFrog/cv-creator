@@ -12,11 +12,12 @@ class CvForm extends Component {
     }
 
     render() {
+        let {infoHandler, educArray, addEducation, deleteEducation} = this.props;
         return (
             <div className="cv-form">
-                <UserInfoForm infoHandler={this.props.infoHandler}/>
+                <UserInfoForm infoHandler={infoHandler}/>
                 <ExperienceForm />
-                <EducationForm />
+                <EducationForm educArray={educArray} addEducation={addEducation} deleteEducation={deleteEducation}/>
                 <SkillForm />
             </div>
         );

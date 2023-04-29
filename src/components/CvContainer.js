@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './CvContainer.css';
 import CvForm from "./form/CvForm";
 import CvPreview from "./preview/CvPreview";
+import uniqid from 'uniqid';
 
 class CvContainer extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -17,10 +18,19 @@ class CvContainer extends Component {
                 userCity: '',
                 userCountry: '',
                 userProfile: '',
-            }
+            },
+            educationArray: [
+                {   id: uniqid(),
+                    schoolName: '',
+                    degreeObtained: '',
+                    timeFrame: ''
+                }
+            ]
         }
 
         this.handleInfoInput = this.handleInfoInput.bind(this);
+        this.addEducation = this.addEducation.bind(this);
+        this.deleteEducation = this.deleteEducation.bind(this);
     }
 
     handleInfoInput(targetState, targetVal) {
@@ -32,10 +42,34 @@ class CvContainer extends Component {
         }))
     }
 
+    addEducation() {
+        this.setState({
+            educationArray: this.state.educationArray.concat(
+                {   id: uniqid(),
+                    schoolName: '',
+                    degreeObtained: '',
+                    timeFrame: ''
+                }
+            )
+        })
+    }
+
+    deleteEducation(targetID) {
+        this.setState({
+            educationArray: this.state.educationArray
+            .filter(elem => elem.id !== targetID)
+        })
+    }
+
     render() {
         return(
             <div className="myContainer">
-                <CvForm infoHandler={this.handleInfoInput}/>
+                <CvForm infoHandler={this.handleInfoInput}
+                    // education handling
+                    educArray={this.state.educationArray} addEducation={this.addEducation}
+                    deleteEducation={this.deleteEducation} 
+                />
+
                 <CvPreview {...this.state}/>
             </div>
         );

@@ -11,7 +11,10 @@ class EducationPrev extends Component {
     render() {
         return(
             <div className="educPrev">
-
+                <div className="previewHeading">Education</div>
+                <div className="prevInfo">
+                    
+                </div>
             </div>
         );
     }
