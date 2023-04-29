@@ -12,7 +12,7 @@ class UserProfilePrev extends Component {
         return(
             <div className="profilePrev">
                 <div className="previewHeading">Profile</div>
-                <div className="prevInfo"></div>
+                <div className="prevInfo">{this.props.profileText}</div>
             </div>
         );
     }

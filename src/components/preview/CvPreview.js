@@ -16,7 +16,7 @@ class CvPreview extends Component {
         return (
             <div className="cv-preview">
                 <UserInfoPrev {...this.props.userInfo}/>
-                <UserProfilePrev />
+                <UserProfilePrev profileText={this.props.userInfo.userProfile}/>
                 <EducationPrev />
                 <ExpPrev />
                 <SkillsPrev />

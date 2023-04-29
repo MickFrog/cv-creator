@@ -21,7 +21,8 @@ class UserInfoForm extends Component {
                     <FormInput inputName="Email" infoHandler={this.props.infoHandler} dataName="userEmail"/>
                     <FormInput inputName="City/Town" infoHandler={this.props.infoHandler} dataName="userCity"/>
                     <FormInput inputName="Country (short form)" infoHandler={this.props.infoHandler} dataName="userCountry"/>
-                    <FormTextArea characters={500} placeText="Tell us about yourself in 500 chars" />
+                    <FormTextArea characters={500} placeText="Tell us about yourself in 500 chars" infoHandler={this.props.infoHandler}
+                        dataName="userProfile"/>
                 </form>
             </div>
         );

@@ -16,6 +16,7 @@ class CvContainer extends Component {
                 userEmail: '',
                 userCity: '',
                 userCountry: '',
+                userProfile: '',
             }
         }
 

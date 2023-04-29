@@ -6,16 +6,16 @@ class FormInput extends Component {
     constructor(props) {
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleChange(event) {
+    handleInputChange(event) {
         this.props.infoHandler(this.props.dataName, event.target.value);
     }
 
     render() {
         return(
-            <input placeholder={this.props.inputName} onChange={this.handleChange}/>
+            <input placeholder={this.props.inputName} onChange={this.handleInputChange}/>
         );
     }
 }
