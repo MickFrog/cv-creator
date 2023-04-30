@@ -24,6 +24,11 @@ class FormInput extends Component {
             this.props.experienceChange(this.props.dataName, this.props.id, event.target.value);
             return;
         }
+
+        if (this.props.skillChange) {
+            this.props.skillChange(this.props.dataName, this.props.id, event.target.value);
+            return;
+        }
     }
 
     render() {

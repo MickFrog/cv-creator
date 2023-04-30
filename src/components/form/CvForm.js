@@ -14,13 +14,15 @@ class CvForm extends Component {
     render() {
         let {infoHandler, 
             educArray, addEducation, deleteEducation, educationChange,
-            expArray, addExperience, deleteExperience, experienceChange} = this.props;
+            expArray, addExperience, deleteExperience, experienceChange,
+            skillArray, addSkill, deleteSkill, skillChange 
+        } = this.props;
         return (
             <div className="cv-form">
                 <UserInfoForm infoHandler={infoHandler}/>
                 <ExperienceForm expArray={expArray} addExperience={addExperience} deleteExperience={deleteExperience} experienceChange={experienceChange} />
                 <EducationForm educArray={educArray} addEducation={addEducation} deleteEducation={deleteEducation} educationChange={educationChange} />
-                <SkillForm />
+                <SkillForm skillArray={skillArray} addSkill={addSkill} deleteSkill={deleteSkill} skillChange={skillChange}/>
             </div>
         );
     }

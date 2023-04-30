@@ -34,6 +34,12 @@ class CvContainer extends Component {
                     workDone: '',
                     timeFrame: ''
                 }
+            ],
+            skillArray: [
+                {
+                    id: uniqid(),
+                    userSkill: '',
+                }
             ]
         }
 
@@ -48,6 +54,11 @@ class CvContainer extends Component {
         this.addExperience = this.addExperience.bind(this);
         this.deleteExperience = this.deleteExperience.bind(this);
         this.experienceChange = this.experienceChange.bind(this);
+
+        //skill bindings
+        this.addSkill = this.addSkill.bind(this);
+        this.deleteSkill = this.deleteSkill.bind(this);
+        this.skillChange = this.skillChange.bind(this);
     }
 
     handleInfoInput(targetState, targetVal) {
@@ -122,6 +133,35 @@ class CvContainer extends Component {
         })
     }
 
+    addSkill() {
+        this.setState({
+            skillArray: this.state.skillArray.concat(
+                {   id: uniqid(),
+                    userSkill: ''
+                }
+            )
+        })
+    }
+
+    deleteSkill(targetID) {
+        this.setState({
+            skillArray: this.state.skillArray
+            .filter(elem => elem.id !== targetID)
+        })
+    }
+
+    skillChange(targetName, targetID, newValue) {
+        this.setState({ // map current state array to new edited array
+            skillArray: this.state.skillArray
+            .map((skillElem) => {
+                if (skillElem.id === targetID) { //if target education obj, make change
+                    return {...skillElem, [targetName]: newValue}
+                }
+                return skillElem; //return other elements (actual pointers to prev elements)
+            })
+        })
+    }
+
     render() {
         return(
             <div className="myContainer">
@@ -132,6 +172,9 @@ class CvContainer extends Component {
                     //experience handling
                     expArray={this.state.experienceArray} addExperience={this.addExperience}
                     deleteExperience={this.deleteExperience} experienceChange={this.experienceChange}
+                    //skill handling
+                    skillArray={this.state.skillArray} addSkill={this.addSkill} deleteSkill={this.deleteSkill}
+                    skillChange={this.skillChange}
                 />
 
                 <CvPreview {...this.state}/>

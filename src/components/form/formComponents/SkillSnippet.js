@@ -8,20 +8,20 @@ class SkillSnippet extends Component {
     constructor(props) {
         super(props);
         
-        this.deleteSkill = this.deleteSkill.bind(this);
+        this.removeSkill = this.removeSkill.bind(this);
     }
 
-    deleteSkill() {
-        this.props.delCallback(this.props.id);
+    removeSkill() {
+        this.props.deleteSkill(this.props.id);
     }
 
     render() {
         return(
             <div className='skill-snip'>
-                <FormInput inputName="Skill" />
+                <FormInput inputName="Skill" dataName="userSkill" id={this.props.id} skillChange={this.props.skillChange}/>
                 {//don't show delete button with one skill
                     this.props.deleteOn
-                    ? <button type="button" className="delBtn"><img src={deletePic} alt="del_btn" onClick={this.deleteSkill}/></button>
+                    ? <button type="button" className="delBtn"><img src={deletePic} alt="del_btn" onClick={this.removeSkill}/></button>
                     : null
                 }
                 
