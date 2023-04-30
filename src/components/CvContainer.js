@@ -38,9 +38,13 @@ class CvContainer extends Component {
         }
 
         this.handleInfoInput = this.handleInfoInput.bind(this);
+
+        //education bindings
         this.addEducation = this.addEducation.bind(this);
         this.deleteEducation = this.deleteEducation.bind(this);
         this.educationChange = this.educationChange.bind(this);
+
+        //experience bindings
         this.addExperience = this.addExperience.bind(this);
         this.deleteExperience = this.deleteExperience.bind(this);
         this.experienceChange = this.experienceChange.bind(this);

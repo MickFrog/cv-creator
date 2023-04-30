@@ -1,0 +1,13 @@
+.expPrevSnip {
+    display: grid;
+    grid-template: 1fr 1fr 3fr / 1fr 1fr;
+}
+
+.companyPrev {
+    grid-column: 1 / 3;
+}
+
+.workDonePrev {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+}

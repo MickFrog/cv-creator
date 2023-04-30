@@ -18,7 +18,7 @@ class CvPreview extends Component {
                 <UserInfoPrev {...this.props.userInfo}/>
                 <UserProfilePrev profileText={this.props.userInfo.userProfile}/>
                 <EducationPrev educationArr={this.props.educationArray}/>
-                <ExpPrev />
+                <ExpPrev experienceArr={this.props.experienceArray}/>
                 <SkillsPrev />
             </div>
         );
