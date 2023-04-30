@@ -11,7 +11,17 @@ class SkillsPrev extends Component {
     render() {
         return(
             <div className="skillsPrev">
+                <div className="previewHeading">Skills</div>
+                <div className="prevInfo">
+                    <ul className="skillList">
+                    {
+                        this.props.skillArray.map((obj) => {
+                            return <li key={obj.id}>{obj.userSkill}</li>
+                        })
+                    }
 
+                    </ul>
+                </div>
             </div>
         );
     }
