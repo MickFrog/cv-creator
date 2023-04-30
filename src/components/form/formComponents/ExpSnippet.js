@@ -17,22 +17,23 @@ class ExpSnippet extends Component {
     }
 
     render() {
+        let { expNum, deleteOn, experienceChange, id} = this.props;
         return(
             <div className="snippet-div">
                 <div className="snip-header">
-                    <h2>Experience {this.props.expNum}</h2>
+                    <h2>Experience {expNum}</h2>
                     { //don't show delete button with one experience
-                        this.props.deleteOn 
+                        deleteOn 
                         ? <button type="button" className="delBtn"><img src={deletePic} onClick={this.deleteExp} alt="del_btn"/></button>
                         : null
                     }
                     
                 </div>
-                <FormInput inputName="Company" dataName="company" experienceChange={this.props.experienceChange}/>
-                <FormInput inputName="Role" dataName="role" experienceChange={this.props.experienceChange}/>
-                <FormTextArea characters={600} placeText="Briefly describe the work done at the company" dataName="workDone" 
-                    experienceChange={this.props.experienceChange}/>
-                <FormInput inputName="Time frame" dataName="timeFrame" experienceChange={this.props.experienceChange}/>
+                <FormInput inputName="Company" id={id} dataName="company" experienceChange={experienceChange}/>
+                <FormInput inputName="Role" id={id} dataName="role" experienceChange={experienceChange}/>
+                <FormTextArea characters={600} placeText="Briefly describe the work done at the company" id={id} dataName="workDone" 
+                    experienceChange={experienceChange}/>
+                <FormInput inputName="Time frame" id={id} dataName="timeFrame" experienceChange={experienceChange}/>
             </div>
         );  
     }

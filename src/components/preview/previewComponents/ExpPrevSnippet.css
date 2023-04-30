@@ -1,13 +1,22 @@
 .expPrevSnip {
     display: grid;
-    grid-template: 1fr 1fr 3fr / 1fr 1fr;
+    grid-template: 1fr 1fr max-content / 1fr 1fr;
+    margin-top: 10px;
 }
 
 .companyPrev {
+    letter-spacing: 2px;
+    color: #2660A4;
+    font-size: 1rem;
+    font-weight: 600;
     grid-column: 1 / 3;
 }
 
 .workDonePrev {
     grid-row: 3 / 4;
     grid-column: 1 / 3;
+}
+
+.rolePrev, .timePrev {
+    color: #2660A4;
 }
