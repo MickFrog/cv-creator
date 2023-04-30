@@ -4,14 +4,14 @@
     justify-self: center;
     
     height: 95vh;
-    width: 650px;
+    width: 750px;
 
     margin: 2rem;
 
     background-color: var(--myWhite);
 
     position: sticky;
-    top: 2rem;
+    top: 1rem;
 }
 
 .previewHeading {
