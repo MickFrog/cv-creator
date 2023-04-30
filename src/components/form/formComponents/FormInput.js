@@ -10,13 +10,19 @@ class FormInput extends Component {
     }
 
     handleInputChange(event) {
+        let { dataName, id} = this.props;
         if (this.props.infoHandler) {
-            this.props.infoHandler(this.props.dataName, event.target.value);
+            this.props.infoHandler(dataName, event.target.value);
             return;
         }
 
         if (this.props.educationChange) {
-            this.props.educationChange(this.props.dataName, this.props.id, event.target.value);
+            this.props.educationChange(dataName, id, event.target.value);
+            return;
+        }
+
+        if (this.props.experienceChange) {
+            this.props.experienceChange(dataName, id, event.target.value);
             return;
         }
     }

@@ -25,6 +25,15 @@ class CvContainer extends Component {
                     degreeObtained: '',
                     timeFrame: ''
                 }
+            ],
+            experienceArray: [
+                {
+                    id: uniqid(),
+                    company: '',
+                    role: '',
+                    workDone: '',
+                    timeFrame: ''
+                }
             ]
         }
 
@@ -32,6 +41,9 @@ class CvContainer extends Component {
         this.addEducation = this.addEducation.bind(this);
         this.deleteEducation = this.deleteEducation.bind(this);
         this.educationChange = this.educationChange.bind(this);
+        this.addExperience = this.addExperience.bind(this);
+        this.deleteExperience = this.deleteExperience.bind(this);
+        this.experienceChange = this.experienceChange.bind(this);
     }
 
     handleInfoInput(targetState, targetVal) {
@@ -63,13 +75,45 @@ class CvContainer extends Component {
     }
 
     educationChange(targetName, targetID, newValue) {
-        this.setState({
+        this.setState({ // map current state array to new edited array
             educationArray: this.state.educationArray
             .map((educationElem) => {
                 if (educationElem.id === targetID) { //if target education obj, make change
                     return {...educationElem, [targetName]: newValue}
                 }
-                return educationElem; //return other elements
+                return educationElem; //return other elements (actual pointers to prev elements)
+            })
+        })
+    }
+
+    addExperience() {
+        this.setState({
+            experienceArray: this.state.experienceArray.concat(
+                {   id: uniqid(),
+                    company: '',
+                    role: '',
+                    workDone: '',
+                    timeFrame: ''
+                }
+            )
+        })
+    }
+
+    deleteExperience(targetID) {
+        this.setState({
+            experienceArray: this.state.experienceArray
+            .filter(elem => elem.id !== targetID)
+        })
+    }
+
+    experienceChange(targetName, targetID, newValue) {
+        this.setState({ // map current state array to new edited array
+            experienceArray: this.state.experienceArray
+            .map((experienceElem) => {
+                if (experienceElem.id === targetID) { //if target education obj, make change
+                    return {...experienceElem, [targetName]: newValue}
+                }
+                return experienceElem; //return other elements (actual pointers to prev elements)
             })
         })
     }
@@ -81,6 +125,9 @@ class CvContainer extends Component {
                     // education handling
                     educArray={this.state.educationArray} addEducation={this.addEducation}
                     deleteEducation={this.deleteEducation} educationChange={this.educationChange}
+                    //experience handling
+                    expArray={this.state.experienceArray} addExperience={this.addExperience}
+                    deleteExperience={this.deleteExperience} experienceChange={this.experienceChange}
                 />
 
                 <CvPreview {...this.state}/>

@@ -10,7 +10,15 @@ class FormTextArea extends Component {
     }
 
     handleTextAreaChange(event) {
-        this.props.infoHandler(this.props.dataName, event.target.value)
+        if (this.props.infoHandler) {
+            this.props.infoHandler(this.props.dataName, event.target.value)
+            return;
+        }
+
+        if (this.props.experienceChange) {
+            this.props.experienceChange(this.props.dataName, this.props.id, event.target.value);
+            return;
+        }
     }
 
     render() {

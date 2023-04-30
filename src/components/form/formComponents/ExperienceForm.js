@@ -2,37 +2,19 @@ import React, { Component } from "react";
 import FormHeading from "./FormHeading";
 import logo from './images/work.svg'
 import ExpSnippet from "./ExpSnippet";
-import uniqid from 'uniqid';
 
 
 class ExperienceForm extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
-        
-        this.state = {
-            expArr: [uniqid()], // initial single experience
-        }
 
         this.addExp = this.addExp.bind(this);
-        this.deleteExp = this.deleteExp.bind(this);
     }
 
     addExp() {
-        this.setState({
-            expArr: this.state.expArr.concat(uniqid())
-        })
+        this.props.addExperience();
     }
-
-    deleteExp(expKey) {
-        if (this.state.expArr.length < 2) return;
-
-        this.setState({
-            expArr: this.state.expArr.filter(elem => elem !== expKey)
-        })
-
-        // console.log(this.state.expArr.filter(elem => elem !== expKey));
-    } 
 
     render() {
         return(
@@ -40,19 +22,20 @@ class ExperienceForm extends Component {
                 <FormHeading logo={logo} text="Experience" />
 
                 <form className="user-form">
-                    {this.state.expArr.map((val, index) => {
-                        if (this.state.expArr.length === 1) {
-                            return <ExpSnippet key={val} id={val} delCallback={this.deleteExp} deleteOn={false}/>
+                    {this.props.expArray.map((expObj, index) => {
+                        if (this.props.expArray.length === 1) {
+                            return <ExpSnippet key={expObj.id} id={expObj.id} deleteOn={false} experienceChange={this.props.experienceChange}/>
                         } 
 
-                        if (this.state.expArr.length > 1) {
-                            return <ExpSnippet key={val} id={val} expNum={`#${index+1}`} delCallback={this.deleteExp} deleteOn={true}/>
+                        if (this.props.expArray.length > 1) {
+                            return <ExpSnippet key={expObj.id} id={expObj.id} expNum={`#${index+1}`} deleteOn={true} 
+                            deleteExperience={this.props.deleteExperience} experienceChange={this.props.experienceChange} />
                         }
                         return null;
                     })}
 
                     {
-                        this.state.expArr.length <= 2 //limit to 3 exps; uses 2 coz of async delayed updating of expArr
+                        this.props.expArray.length <= 2 //limit to 3 exps; uses 2 coz of async delayed updating of expArr
                         ?   <div className="btn-holder">
                                 <button type="button" className="addBtn" onClick={this.addExp}>Add</button>
                             </div>

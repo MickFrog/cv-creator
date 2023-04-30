@@ -13,7 +13,7 @@ class ExpSnippet extends Component {
     }
 
     deleteExp() {
-        this.props.delCallback(this.props.id);
+        this.props.deleteExperience(this.props.id);
     }
 
     render() {
@@ -28,10 +28,11 @@ class ExpSnippet extends Component {
                     }
                     
                 </div>
-                <FormInput inputName="Company" />
-                <FormInput inputName="Role" />
-                <FormTextArea characters={600} placeText="Briefly describe the work done at the company" />
-                <FormInput inputName="Time frame" />
+                <FormInput inputName="Company" dataName="company" experienceChange={this.props.experienceChange}/>
+                <FormInput inputName="Role" dataName="role" experienceChange={this.props.experienceChange}/>
+                <FormTextArea characters={600} placeText="Briefly describe the work done at the company" dataName="workDone" 
+                    experienceChange={this.props.experienceChange}/>
+                <FormInput inputName="Time frame" dataName="timeFrame" experienceChange={this.props.experienceChange}/>
             </div>
         );  
     }
