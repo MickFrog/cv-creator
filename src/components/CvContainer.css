@@ -1,29 +1,43 @@
 .myContainer {
-    padding-left: max(80px, 5%);
-    display: grid;
-    grid-template-columns: max(35%, 400px) 1fr;
+  padding-left: max(80px, 5%);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: center;
 
-    background-color: var(--darkBlack);
+  background-color: var(--darkBlack);
+  min-height: 100vh;
 }
 
 .printBtn {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 
-    position: fixed;
-    top: 50%;
-    left: 10px;
+  position: fixed;
+  top: 50%;
+  left: 10px;
 
-    border: 0px;
-    border-radius: 10px;
-    background-color: var(--inputBg);
+  border: 0px;
+  border-radius: 10px;
+  background-color: var(--inputBg);
 }
 
 .printBtn > img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .printBtn:hover {
-    background-color: var(--myWhite);
+  background-color: #777;
+}
+
+@media (max-width: 600px) {
+  .myContainer {
+    padding: 0;
+  }
+
+  .printBtn {
+    position: initial;
+    margin-bottom: 1rem;
+  }
 }
