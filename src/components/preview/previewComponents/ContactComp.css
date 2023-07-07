@@ -15,5 +15,5 @@
 }
 
 .contact-text {
-    font-size: 0.9rem;
+    font-size: calc(1vmin + 6px);
 }

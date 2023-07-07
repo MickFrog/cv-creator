@@ -1,14 +1,17 @@
 .infoPrev {
-    background-color: #30343F;
+    background-color: #30343f;
     grid-column: 1 / 3;
 
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+    overflow-x: auto;
 }
 
-.user-name, .user-role {
+.user-name,
+.user-role {
     color: var(--myWhite);
-    
+
     display: flex;
     flex-flow: row nowrap;
 
@@ -18,10 +21,10 @@
 
 .user-name {
     grid-column: 1 / 4;
-    font-size: 2.4rem;
+    font-size: calc(2vmin + 25px);
 }
 
 .user-role {
     grid-column: 1 / 4;
-    font-size: 1.1rem;
+    font-size: calc(2vmin + 10px);
 }

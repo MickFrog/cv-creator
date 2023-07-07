@@ -1,6 +1,12 @@
+:root {
+    --prevHeadingSize: calc(1vmin + 12px);
+    --skillHeadingSize: calc(1vmin + 10px);
+    --prevTextSize: calc(1vmin + 5px);
+}
+
 .cv-preview {
     display: grid;
-    grid-template: 1fr 1fr 3fr / 3fr 2fr;
+    grid-template: max-content 1fr 3fr / 3fr 2fr;
 
     height: min(900px, 95vh);
     width: 600px;
@@ -14,28 +20,37 @@
 }
 
 .previewHeading {
-    align-self: center;
     margin-right: 2rem;
     padding-left: 2rem;
     color: #82735c;
 
-    font-size: 1.2rem;
+    font-size: var(--prevHeadingSize);
     font-weight: 600;
 
     border-bottom: 1px solid #82735c;
 }
 
 .prevInfo {
-    padding-left: 1rem;
-    font-size: 0.8rem;
-    text-align: justify;
+    padding-left: 5px;
+    font-size: var(--prevTextSize);
+}
+
+.sectionPrev {
+    align-self: self-start;
+    display: grid;
+    grid-template-rows: 1fr max-content;
 }
 
 @media (max-width: 600px) {
+    :root {
+        --prevTextSize: calc(1vmin + 6px);
+    }
+
     .cv-preview {
         display: none;
         position: fixed;
         top: 10px;
+        height: 85vh;
 
         margin: 0px 10px;
         width: 90vw;

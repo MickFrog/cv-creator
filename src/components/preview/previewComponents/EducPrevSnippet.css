@@ -1,6 +1,7 @@
 .educPrevSnip {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, max-content);
+    gap: 5px;
 }
 
 .schoolNamePrev {
