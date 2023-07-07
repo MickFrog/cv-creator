@@ -34,5 +34,11 @@
 @media (max-width: 600px) {
     .cv-preview {
         display: none;
+        position: fixed;
+        top: 10px;
+
+        margin: 0px 10px;
+        width: 90vw;
+        min-width: min-content;
     }
 }

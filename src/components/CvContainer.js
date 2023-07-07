@@ -45,6 +45,7 @@ class CvContainer extends Component {
                     userSkill: "",
                 },
             ],
+            showPreview: false,
         };
 
         this.handleInfoInput = this.handleInfoInput.bind(this);
@@ -63,6 +64,9 @@ class CvContainer extends Component {
         this.addSkill = this.addSkill.bind(this);
         this.deleteSkill = this.deleteSkill.bind(this);
         this.skillChange = this.skillChange.bind(this);
+
+        //preview display binding
+        this.handlePreviewDisplay = this.handlePreviewDisplay.bind(this);
     }
 
     handleInfoInput(targetState, targetVal) {
@@ -171,6 +175,11 @@ class CvContainer extends Component {
         });
     }
 
+    handlePreviewDisplay() {
+        // change display of cv preview
+        this.setState({ showPreview: !this.state.showPreview });
+    }
+
     render() {
         return (
             <div className="myContainer">
@@ -211,7 +220,11 @@ class CvContainer extends Component {
                         content={() => this.componentRef}
                         documentTitle="newCV"
                     />
-                    <button className="eyeBtn" title="View Preview">
+                    <button
+                        className="eyeBtn"
+                        title="View Preview"
+                        onClick={this.handlePreviewDisplay}
+                    >
                         <img src={eyeImg} alt="viewPrev" />
                     </button>
                 </div>
