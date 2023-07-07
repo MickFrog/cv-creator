@@ -1,9 +1,8 @@
 .cv-preview {
   display: grid;
   grid-template: 1fr 1fr 3fr / 3fr 2fr;
-  justify-self: center;
 
-  height: 95vh;
+  height: min(900px, 95vh);
   width: 600px;
 
   margin: 2rem;
@@ -34,6 +33,6 @@
 
 @media (max-width: 600px) {
   .cv-preview {
-    position: initial;
+    display: none;
   }
 }

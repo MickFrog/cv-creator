@@ -5,6 +5,7 @@ import CvPreview from "./preview/CvPreview";
 import uniqid from "uniqid";
 import ReactToPrint from "react-to-print";
 import printLogo from "./preview/previewComponents/images/print.svg";
+import eyeImg from "./preview/previewComponents/images/eye.svg";
 
 class CvContainer extends Component {
   // eslint-disable-next-line no-useless-constructor
@@ -182,18 +183,23 @@ class CvContainer extends Component {
 
         <CvPreview {...this.state} ref={(elem) => (this.componentRef = elem)} />
 
-        {/* prepare printing package variables */}
-        <ReactToPrint
-          trigger={() => {
-            return (
-              <button className="printBtn" title="Print CV">
-                <img src={printLogo} alt="printCV" />
-              </button>
-            );
-          }}
-          content={() => this.componentRef}
-          documentTitle="newCV"
-        />
+        <div className="btns-container">
+          {/* prepare printing package variables */}
+          <ReactToPrint
+            trigger={() => {
+              return (
+                <button className="printBtn" title="Print CV">
+                  <img src={printLogo} alt="printCV" />
+                </button>
+              );
+            }}
+            content={() => this.componentRef}
+            documentTitle="newCV"
+          />
+          <button className="eyeBtn" title="View Preview">
+            <img src={eyeImg} alt="viewPrev" />
+          </button>
+        </div>
       </div>
     );
   }

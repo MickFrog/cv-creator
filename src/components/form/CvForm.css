@@ -6,7 +6,7 @@
 
   align-items: center;
   gap: 15px;
-  width: max(30%, 400px);
+  width: max(30%, 450px);
 }
 
 .form-div {
@@ -50,6 +50,6 @@
 
 @media (max-width: 600px) {
   .cv-form {
-    width: max-content;
+    width: 90%;
   }
 }
