@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './FormInput.css';
+import "./FormInput.css";
 
 class FormTextArea extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -11,19 +11,27 @@ class FormTextArea extends Component {
 
     handleTextAreaChange(event) {
         if (this.props.infoHandler) {
-            this.props.infoHandler(this.props.dataName, event.target.value)
+            this.props.infoHandler(this.props.dataName, event.target.value);
             return;
         }
 
         if (this.props.experienceChange) {
-            this.props.experienceChange(this.props.dataName, this.props.id, event.target.value);
+            this.props.experienceChange(
+                this.props.dataName,
+                this.props.id,
+                event.target.value
+            );
             return;
         }
     }
 
     render() {
-        return(
-            <textarea maxLength={this.props.characters} placeholder={this.props.placeText} onChange={this.handleTextAreaChange}/>
+        return (
+            <textarea
+                maxLength={this.props.characters}
+                placeholder={this.props.placeText}
+                onChange={this.handleTextAreaChange}
+            />
         );
     }
 }

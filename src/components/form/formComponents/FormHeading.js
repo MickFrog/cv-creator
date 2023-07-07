@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './FormHeading.css';
+import "./FormHeading.css";
 
 class FormHeading extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -10,9 +10,9 @@ class FormHeading extends Component {
     render() {
         let { logo, text } = this.props;
 
-        return(
+        return (
             <div className="formHeading">
-                <img src={logo} alt="head_logo"/>
+                <img src={logo} alt="head_logo" />
                 <p>{text}</p>
             </div>
         );

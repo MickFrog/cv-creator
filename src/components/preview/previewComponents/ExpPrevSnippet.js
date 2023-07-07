@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import './ExpPrevSnippet.css';
+import "./ExpPrevSnippet.css";
 
 class ExpPrevSnippet extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props);
-        
     }
 
     render() {
-        return(
+        return (
             <div className="expPrevSnip">
                 <div className="companyPrev">{this.props.company}</div>
                 <div className="rolePrev">{this.props.role}</div>

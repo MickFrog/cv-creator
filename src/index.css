@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
-  --darkBlack: #141414;
-  --formBg: #1c1c1c;
-  --inputBg: #292929;
-  --lightBlue: #9AC4F8;
-  --myWhite: #F4FFFD;
-  --myGreen: #53DD6C;
+    --darkBlack: #141414;
+    --formBg: #1c1c1c;
+    --inputBg: #292929;
+    --lightBlue: #9ac4f8;
+    --myWhite: #f4fffd;
+    --myGreen: #53dd6c;
 }
 
 * {
-  margin: 0px;
-  box-sizing: border-box;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* my colors 

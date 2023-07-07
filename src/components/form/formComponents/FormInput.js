@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './FormInput.css'
+import "./FormInput.css";
 
 class FormInput extends Component {
     // eslint-disable-next-line no-useless-constructor
@@ -16,24 +16,39 @@ class FormInput extends Component {
         }
 
         if (this.props.educationChange) {
-            this.props.educationChange(this.props.dataName, this.props.id, event.target.value);
+            this.props.educationChange(
+                this.props.dataName,
+                this.props.id,
+                event.target.value
+            );
             return;
         }
 
         if (this.props.experienceChange) {
-            this.props.experienceChange(this.props.dataName, this.props.id, event.target.value);
+            this.props.experienceChange(
+                this.props.dataName,
+                this.props.id,
+                event.target.value
+            );
             return;
         }
 
         if (this.props.skillChange) {
-            this.props.skillChange(this.props.dataName, this.props.id, event.target.value);
+            this.props.skillChange(
+                this.props.dataName,
+                this.props.id,
+                event.target.value
+            );
             return;
         }
     }
 
     render() {
-        return(
-            <input placeholder={this.props.inputName} onChange={this.handleInputChange}/>
+        return (
+            <input
+                placeholder={this.props.inputName}
+                onChange={this.handleInputChange}
+            />
         );
     }
 }
