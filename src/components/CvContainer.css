@@ -1,61 +1,61 @@
 .myContainer {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 1rem;
-  justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
 
-  background-color: var(--darkBlack);
-  min-height: 100vh;
+    background-color: var(--darkBlack);
+    min-height: 100vh;
 }
 
 .printBtn,
 .eyeBtn {
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
 
-  position: fixed;
-  top: 50%;
-  left: 10px;
+    position: fixed;
+    top: 50%;
+    left: 10px;
 
-  border: 0px;
-  border-radius: 10px;
-  background-color: var(--inputBg);
+    border: 0px;
+    border-radius: 10px;
+    background-color: var(--inputBg);
 }
 
 .eyeBtn {
-  position: static;
-  display: none;
+    position: static;
+    display: none;
 }
 
 .printBtn > img,
 .eyeBtn > img {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .printBtn:hover,
 .eyeBtn:hover {
-  background-color: #777;
+    background-color: #777;
 }
 
 .btns-container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 @media (max-width: 600px) {
-  .myContainer {
-    flex-flow: column nowrap;
-    align-items: center;
-    padding: 0;
-  }
+    .myContainer {
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 0;
+    }
 
-  .printBtn {
-    position: initial;
-    margin-bottom: 1rem;
-  }
+    .printBtn {
+        position: initial;
+        margin-bottom: 1rem;
+    }
 
-  .eyeBtn {
-    display: initial;
-  }
+    .eyeBtn {
+        display: initial;
+    }
 }

@@ -1,38 +1,38 @@
 .cv-preview {
-  display: grid;
-  grid-template: 1fr 1fr 3fr / 3fr 2fr;
+    display: grid;
+    grid-template: 1fr 1fr 3fr / 3fr 2fr;
 
-  height: min(900px, 95vh);
-  width: 600px;
+    height: min(900px, 95vh);
+    width: 600px;
 
-  margin: 2rem;
+    margin: 2rem;
 
-  background-color: var(--myWhite);
+    background-color: var(--myWhite);
 
-  position: sticky;
-  top: 1rem;
+    position: sticky;
+    top: 1rem;
 }
 
 .previewHeading {
-  align-self: center;
-  margin-right: 2rem;
-  padding-left: 2rem;
-  color: #82735c;
+    align-self: center;
+    margin-right: 2rem;
+    padding-left: 2rem;
+    color: #82735c;
 
-  font-size: 1.2rem;
-  font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 600;
 
-  border-bottom: 1px solid #82735c;
+    border-bottom: 1px solid #82735c;
 }
 
 .prevInfo {
-  padding-left: 1rem;
-  font-size: 0.8rem;
-  text-align: justify;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    text-align: justify;
 }
 
 @media (max-width: 600px) {
-  .cv-preview {
-    display: none;
-  }
+    .cv-preview {
+        display: none;
+    }
 }
